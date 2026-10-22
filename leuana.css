@@ -1,0 +1,262 @@
+/* MAISONÉ — Luxury Stays Demo */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f7f3ed;
+    color: #2c241e;
+    line-height: 1.6;
+}
+
+/* ---------- NAV ---------- */
+nav {
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c241e;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 4px;
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+nav a {
+    color: #e8dfd3;
+    text-decoration: none;
+    margin-left: 28px;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #c8aa7a;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    height: 520px;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+        url("https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=85");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(36px, 6vw, 62px);
+    font-weight: normal;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    opacity: 0.9;
+    margin-bottom: 24px;
+}
+
+.hero button {
+    padding: 14px 32px;
+    border: none;
+    background: #c8aa7a;
+    color: #2c241e;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.15s;
+}
+
+.hero button:hover {
+    background: #d4b98a;
+    transform: translateY(-2px);
+}
+
+/* ---------- HOUSES ---------- */
+.houses {
+    padding: 70px 8%;
+}
+
+.houses h2 {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.2rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.houses .subtitle {
+    text-align: center;
+    color: #6b5e52;
+    margin-bottom: 45px;
+}
+
+.house-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+}
+
+.house {
+    background: #fff;
+    width: 320px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07);
+    transition: transform 0.25s, box-shadow 0.25s;
+    overflow: hidden;
+}
+
+.house:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.house img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.house-info {
+    padding: 20px 22px 24px;
+}
+
+.house h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+
+.house .location {
+    color: #876b43;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.house .details {
+    color: #6b5e52;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.house .desc {
+    color: #5a4f46;
+    font-size: 0.88rem;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.house .price {
+    color: #876b43;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+}
+
+.house button {
+    width: 100%;
+    padding: 12px;
+    background: #2c241e;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: background 0.25s;
+}
+
+.house button:hover {
+    background: #a89582;
+}
+
+/* ---------- ABOUT ---------- */
+.about {
+    background: #e8dfd3;
+    text-align: center;
+    padding: 70px 12%;
+}
+
+.about h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 18px;
+}
+
+.about p {
+    max-width: 580px;
+    margin: 0 auto 12px;
+    color: #4a4038;
+    font-size: 1.05rem;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background: #2c241e;
+    color: #e8dfd3;
+    text-align: center;
+    padding: 36px 20px;
+}
+
+footer h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 4px;
+    font-weight: normal;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    margin-top: 4px;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 640px) {
+    nav {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 5%;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        height: 420px;
+    }
+
+    .house {
+        width: 100%;
+        max-width: 360px;
+    }   
+
+    .houses,
+    .about {
+        padding: 50px 6%;
+    }
+}
